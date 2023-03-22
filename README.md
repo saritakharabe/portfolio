@@ -1,5 +1,7 @@
 # Advanced CSS: Portfolio
 
+![sreenshot of final page](./assets/images/portfolio.png)
+
 ## User Story
 
 ```
