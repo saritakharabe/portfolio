@@ -16,16 +16,24 @@ header {
 }
 
 header h1 {
-  display: inline-block;
+  display: inline;
   font-size: 40px;
 }
 
-/* h1 {
+.main-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header-list{
+  float: right;
+}
+h1 {
   background-color: cadetblue;
-} */
+}
 
 header div {
-  float: right;
+  display: flex;
   padding-top: 15px;
   margin-right: 20px;
   font-size: 20px;
@@ -48,6 +56,7 @@ a:hover {
   background-image: url("../images/image-3.jpg");
   background-size: cover;
   padding: 70px 40px;
+  flex-wrap: wrap;
 }
 
 h4 {
@@ -67,7 +76,7 @@ h4 {
 .project-details,
 .contact-details {
   width: 20%;
-  border-right: 4px solid black;
+  border-right: 3px solid black;
   margin-right: 50px;
 }
 
@@ -81,7 +90,9 @@ h2 {
 .project-data,
 .contact-data {
   width: 75%;
+  float: right;
 }
+
 
 .project-info {
   width: 100%;
@@ -127,12 +138,12 @@ ul,
 li {
   display: inline;
   margin-right: 30px;
-  margin-left: 20px;
   font-size: 25px;
 }
 
 li {
   text-decoration: underline;
+  flex-wrap: wrap;
 }
 
 .content {
@@ -143,24 +154,52 @@ li {
   position: absolute;
 }
 
-h3{
-    margin-bottom: 10px;
+h3 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  
 }
 
 @media screen and (max-width: 992px) {
-    header {
-      background: #772014;
-    }
-  }
   
-  @media screen and (max-width: 768px) {
-    div {
-      background-color: #bb8588;
-    }
+  .about-me, .projects, .contacts{
+    display: flex;
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 576px) {
-    .divided-part {
-      background-color: #8ac4ff;
-    }
+ 
+  .about-details, .project-details,.contact-details{
+    width: 100%;
+    border-bottom: 3px solid black;
+    border-right: none;
+    margin: 10px;
   }
+
+  .about-data,.project-data, .contact-data{
+    width:100%;
+    margin: 10px;
+  }
+
+  h2,h4,h1{ 
+    text-align: center;
+  }
+  li{
+    text-align: left;
+  }
+  .divided-part{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-02{
+    width: 100%;
+  }
+
+  .project-03{
+    width: 100%;
+  }
+
+}
+
